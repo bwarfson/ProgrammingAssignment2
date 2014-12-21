@@ -3,8 +3,11 @@
 
 ## Write a short comment describing this function
 
+## Creates an opbect of type list that acts as a storage device.
+## Stores the original matrix value and what will be the solve which is set to null
+## This is essentially a getter setter to put it into OOP terms I am familier with
 makeCacheMatrix <- function(x = matrix()) {
-  s <- NULL
+  s <- NULL #set s = null 
   set <- function(y) {
     x <<- y
     s <<- NULL
@@ -19,7 +22,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+## Accesses the makeCacheMatrix object (not the function). 
+## Gets the value of the matrix used to create the object.  
+## If solve has not been calculated then it calculates and stores it
+## If it has been calculated it gets and returns the value
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   s <- x$getsolve()
